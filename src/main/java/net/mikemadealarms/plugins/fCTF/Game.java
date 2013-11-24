@@ -16,4 +16,7 @@ public class Game {
     public Game() {
         teams = new ArrayList<Team>();
     }
+    public void startGame() {
+        
+    }
 }
