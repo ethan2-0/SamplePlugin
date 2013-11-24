@@ -7,7 +7,14 @@
 package net.mikemadealarms.plugins.fCTF;
 
 import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerJoinEvent;
 
 public class Listeners implements Listener {
+    
+    public void onPlayerJoin(PlayerJoinEvent event) {
+        
+        
+        
+    }
     
 }
