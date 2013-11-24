@@ -37,4 +37,12 @@ public class Game {
         addTeam(new Team(ChatColor.RED, new ItemStack(Material.WOOL, 1, (short) 14)));
         addTeam(new Team(ChatColor.BLUE, new ItemStack(Material.WOOL, 1, (short) 11)));
     }
+    public int getTeamIndexOf(fPlayer p) {
+        for(int i = 0; i < teams.size(); i++) {
+            if(teams.get(i).hasPlayer(p)) {
+                return i;
+            }
+        }
+        return -1;
+    }
 }
