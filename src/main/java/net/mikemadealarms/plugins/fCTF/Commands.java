@@ -23,6 +23,7 @@ public class Commands implements CommandExecutor {
             } else {
                 return false;
             }
+        } else if (cmd.getLabel().equalsIgnoreCase("switch")) {
         } else {
             return false;
         }
