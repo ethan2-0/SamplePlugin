@@ -12,4 +12,7 @@ public class fPlayer {
     public fPlayer(Player p) {
         this.p = p;
     }
+    public void aquireFlag() {
+        hasFlag = true;
+    }
 }

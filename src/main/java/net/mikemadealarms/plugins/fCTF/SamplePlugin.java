@@ -38,6 +38,9 @@ public class SamplePlugin extends JavaPlugin {
         }
         return null;
     }
+    public fPlayer getFPlayerByPlayer(Player p) {
+        return getPlayerByUsername(p.getName());
+    }
     public fPlayer getAPlayer() {
         return players.get(0);
     }
