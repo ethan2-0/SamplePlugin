@@ -11,6 +11,7 @@ public class Game {
     public int TeamACap;
     public int TeamBCap;
     public int Cap2Win;
+    public int Players2Start;
     public ArrayList<Team> teams;
     public Game() {
         teams = new ArrayList<Team>();
