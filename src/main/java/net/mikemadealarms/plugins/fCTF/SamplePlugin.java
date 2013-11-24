@@ -26,6 +26,7 @@ public class SamplePlugin extends JavaPlugin {
         this.saveDefaultConfig();
         Game.instance.Players2Start = this.getConfig().getInt("Players2Start");
         Game.instance.Time2Start = this.getConfig().getInt("Time2Start");
+        Game.instance.teams.
     }
     public void handlePlayerJoin(Player p) {
         players.add(new fPlayer(p));

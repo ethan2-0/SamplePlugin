@@ -1,3 +1,25 @@
 Players2Start: 2
 Time2Start: 30
 Caps2Win: 3
+Spawn:
+    Spawn:
+        X:
+        Y:
+        Z:
+    TeamA:
+        X:
+        Y:
+        Z:
+    TeamB:
+        X:
+        Y:
+        Z:
+Flag:
+    TeamA:
+        X:
+        Y:
+        Z:
+    TeamB:
+        X:
+        Y:
+        Z:

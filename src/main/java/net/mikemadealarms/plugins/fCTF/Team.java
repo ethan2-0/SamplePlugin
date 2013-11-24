@@ -13,6 +13,8 @@ public class Team {
     ArrayList<fPlayer> players;
     public int captures;
     public boolean hasFlag;
+    public Location spawn;
+    public Location flag;
     ItemStack wool;
     public Team(ChatColor prefix, ItemStack wool) {
         this.prefix = prefix;
