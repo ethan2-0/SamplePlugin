@@ -19,9 +19,18 @@ public class Game {
     public void startGame() {
         
     }
-    public void getTeamOf(fPlayer p) {
+    public Team getTeamOf(fPlayer p) {
         for(int i = 0; i < teams.size(); i++) {
-            
+            if(teams.get(i).hasPlayer(p)) {
+                return teams.get(i);
+            }
         }
+        return null;
+    }
+    public void addTeam(Team team) {
+        teams.add(team);
+    }
+    public void initializeTeams() {
+        
     }
 }
