@@ -29,6 +29,7 @@ public class Countdown_Start implements Runnable {
     }
     public void gameStarted() {
         SamplePlugin.instance.getServer().broadcastMessage(ChatColor.LIGHT_PURPLE + "Game Started!");
+        Game.instance.GameInProgress = true;
         Game.instance.startGame();
     }
 }
