@@ -7,7 +7,7 @@ package net.mikemadealarms.plugins.fCTF;
 import java.util.ArrayList;
 
 public class Game {
-    public Game instance;
+    public static Game instance;
     public int Cap2Win;
     public int Players2Start;
     public ArrayList<Team> teams;

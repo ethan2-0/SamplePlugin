@@ -16,7 +16,9 @@ public class Listeners implements Listener {
         
         SamplePlugin.instance.handlePlayerJoin(event.getPlayer());
         event.setJoinMessage(null);
-        
+        if (event.getPlayer().getServer().getOnlinePlayers().length == Game.instance.Players2Start) {
+            
+        }
     }
     
 }

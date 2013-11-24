@@ -22,6 +22,7 @@ public class SamplePlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         getCommand("test").setExecutor(new Commands());
+        Game.instance.Players2Start = 2;
     }
     public void handlePlayerJoin(Player p) {
         players.add(new fPlayer(p));
