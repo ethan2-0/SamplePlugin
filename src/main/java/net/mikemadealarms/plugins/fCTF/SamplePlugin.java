@@ -1,5 +1,5 @@
 
-package com.dinnerbone.bukkit.sample;
+package net.mikemadealarms.plugins.fCTF;
 
 import java.util.HashMap;
 import org.bukkit.entity.Player;
