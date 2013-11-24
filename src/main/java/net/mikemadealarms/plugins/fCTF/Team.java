@@ -6,6 +6,7 @@ package net.mikemadealarms.plugins.fCTF;
 
 import java.util.ArrayList;
 import org.bukkit.ChatColor;
+import org.bukkit.Location;
 import org.bukkit.inventory.ItemStack;
 
 public class Team {

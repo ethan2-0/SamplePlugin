@@ -26,7 +26,21 @@ public class SamplePlugin extends JavaPlugin {
         this.saveDefaultConfig();
         Game.instance.Players2Start = this.getConfig().getInt("Players2Start");
         Game.instance.Time2Start = this.getConfig().getInt("Time2Start");
-        Game.instance.teams.
+        Game.instance.teams.get(0).spawn.setX(this.getConfig().getInt("Spawn.TeamA.X"));
+        Game.instance.teams.get(0).spawn.setY(this.getConfig().getInt("Spawn.TeamA.Y"));
+        Game.instance.teams.get(0).spawn.setZ(this.getConfig().getInt("Spawn.TeamA.Z"));
+        
+        Game.instance.teams.get(1).spawn.setX(this.getConfig().getInt("Spawn.TeamB.X"));
+        Game.instance.teams.get(1).spawn.setY(this.getConfig().getInt("Spawn.TeamB.Y"));
+        Game.instance.teams.get(1).spawn.setZ(this.getConfig().getInt("Spawn.TeamB.Z"));
+        
+        Game.instance.teams.get(0).flag.setX(this.getConfig().getInt("Flag.TeamA.X"));
+        Game.instance.teams.get(0).flag.setY(this.getConfig().getInt("Flag.TeamA.Y"));
+        Game.instance.teams.get(0).flag.setZ(this.getConfig().getInt("Flag.TeamA.Z"));
+        
+        Game.instance.teams.get(1).flag.setX(this.getConfig().getInt("Flag.TeamA.X"));
+        Game.instance.teams.get(1).flag.setY(this.getConfig().getInt("Flag.TeamA.Y"));
+        Game.instance.teams.get(1).flag.setZ(this.getConfig().getInt("Flag.TeamA.Z"));
     }
     public void handlePlayerJoin(Player p) {
         players.add(new fPlayer(p));
