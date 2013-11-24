@@ -11,6 +11,7 @@ public class Game {
     public int Cap2Win;
     public int Players2Start;
     public int Time2Start;
+    public boolean GameInProgress;
     public ArrayList<Team> teams;
     public Game() {
         teams = new ArrayList<Team>();
