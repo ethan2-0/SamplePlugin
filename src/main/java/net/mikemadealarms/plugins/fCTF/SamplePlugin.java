@@ -22,6 +22,7 @@ public class SamplePlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         getCommand("test").setExecutor(new Commands());
+        getCommand("ctf").setExecutor(new Commands());
         this.saveDefaultConfig();
         Game.instance.Players2Start = this.getConfig().getInt("Players2Start");
         Game.instance.Time2Start = this.getConfig().getInt("Time2Start");
