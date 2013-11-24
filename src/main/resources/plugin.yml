@@ -1,5 +1,5 @@
 name: fCTF
-main: net.mikemadealarms.plugins.fCTF
+main: net.mikemadealarms.plugins.fCTF.SamplePlugin
 version: 1.0
 commands:
   test:
