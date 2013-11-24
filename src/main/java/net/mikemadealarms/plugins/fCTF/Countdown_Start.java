@@ -7,9 +7,9 @@ package net.mikemadealarms.plugins.fCTF;
 import org.bukkit.ChatColor;
 
 public class Countdown_Start implements Runnable {
-
+    private boolean continueCountdown = true;
     public void run() {
-        for(int i = 0; i < Game.instance.Time2Start - 10; i += 5) {
+        for(int i = 0; i < Game.instance.Time2Start - 10 || !continueCountdown; i += 5) {
             try {
                 Thread.sleep(5000L);
             } catch(InterruptedException e) {
@@ -31,5 +31,8 @@ public class Countdown_Start implements Runnable {
         SamplePlugin.instance.getServer().broadcastMessage(ChatColor.LIGHT_PURPLE + "Game Started!");
         Game.instance.GameInProgress = true;
         Game.instance.startGame();
+    }
+    public void stopCountdown() {
+        continueCountdown = false;
     }
 }

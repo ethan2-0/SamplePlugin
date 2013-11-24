@@ -8,6 +8,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 
 public class Commands implements CommandExecutor {
 
@@ -24,6 +25,14 @@ public class Commands implements CommandExecutor {
                 return false;
             }
         } else if (cmd.getLabel().equalsIgnoreCase("switch")) {
+            if(sender instanceof Player) {
+                Player pl = (Player) sender;
+                fPlayer p = SamplePlugin.instance.getFPlayerByPlayer(pl);
+                int i = Game.instance.getTeamIndexOf(p);
+                Team t = Game.instance.getTeamOf(p);
+                t.removePlayer(p);
+                Game.instance.teams.get(i).addPlayer(p);
+            }
         } else {
             return false;
         }

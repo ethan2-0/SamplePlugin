@@ -37,4 +37,7 @@ public class Team {
         players.add(p);
         return true;
     }
+    public void removePlayer(fPlayer p) {
+        players.remove(p);
+    }
 }
