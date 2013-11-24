@@ -15,4 +15,10 @@ public class fPlayer {
     public void aquireFlag() {
         hasFlag = true;
     }
+    public void dropFlag() {
+        
+    }
+    public boolean attempToPlantFlag() {
+        
+    }
 }

@@ -44,5 +44,9 @@ public class SamplePlugin extends JavaPlugin {
     public fPlayer getAPlayer() {
         return players.get(0);
     }
-    
+    public Location getLocationOfTeamSpawn(int teamNum) {
+        if(Game.instance.teams.get(teamNum) != null) {
+            
+        }
+    }
 }
