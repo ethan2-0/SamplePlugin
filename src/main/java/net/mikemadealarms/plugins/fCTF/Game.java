@@ -5,6 +5,9 @@
 package net.mikemadealarms.plugins.fCTF;
 
 import java.util.ArrayList;
+import org.bukkit.ChatColor;
+import org.bukkit.Material;
+import org.bukkit.inventory.ItemStack;
 
 public class Game {
     public static Game instance;
@@ -31,6 +34,7 @@ public class Game {
         teams.add(team);
     }
     public void initializeTeams() {
-        
+        addTeam(new Team(ChatColor.RED, new ItemStack(Material.WOOL, 1, (short) 14)));
+        addTeam(new Team(ChatColor.BLUE, new ItemStack(Material.WOOL, 1, (short) 11)));
     }
 }

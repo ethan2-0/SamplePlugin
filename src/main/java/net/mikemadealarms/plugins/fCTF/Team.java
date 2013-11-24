@@ -5,15 +5,16 @@
 package net.mikemadealarms.plugins.fCTF;
 
 import java.util.ArrayList;
+import org.bukkit.ChatColor;
 import org.bukkit.inventory.ItemStack;
 
 public class Team {
-    String prefix;
+    ChatColor prefix;
     ArrayList<fPlayer> players;
     public int captures;
     public boolean hasFlag;
     ItemStack wool;
-    public Team(String prefix, ItemStack wool) {
+    public Team(ChatColor prefix, ItemStack wool) {
         this.prefix = prefix;
         players = new ArrayList<fPlayer>();
         this.wool = wool;
