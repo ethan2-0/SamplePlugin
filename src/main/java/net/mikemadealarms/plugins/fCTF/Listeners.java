@@ -10,11 +10,19 @@ import org.bukkit.event.player.*;
 
 public class Listeners implements Listener {
 
+    int switcher = 0;
     @EventHandler(priority = EventPriority.NORMAL)
     public void onPlayerJoin(PlayerJoinEvent event) {
 
         SamplePlugin.instance.handlePlayerJoin(event.getPlayer());
         event.setJoinMessage(null);
+        if (switcher == 0) {
+            Game.instance.teams.get(0).addPlayer(SamplePlugin.instance.getFPlayerByPlayer(event.getPlayer()));
+            switcher = 1;
+        } else {
+            Game.instance.teams.get(1).addPlayer(SamplePlugin.instance.getFPlayerByPlayer(event.getPlayer()));
+            switcher = 0;
+        }
         if (event.getPlayer().getServer().getOnlinePlayers().length == Game.instance.Players2Start) {
             
         }
