@@ -15,6 +15,7 @@ public class Listeners implements Listener {
     public void onPlayerJoin(PlayerJoinEvent event) {
         
         SamplePlugin.instance.handlePlayerJoin(event.getPlayer());
+        event.setJoinMessage(null);
         
     }
     
