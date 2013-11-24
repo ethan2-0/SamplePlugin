@@ -1,6 +1,7 @@
 
 package net.mikemadealarms.plugins.fCTF;
 
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
@@ -8,14 +9,19 @@ import org.bukkit.plugin.java.JavaPlugin;
  */
 public class SamplePlugin extends JavaPlugin {
 
-    
+    public static SamplePlugin instance;
     @Override
     public void onDisable() {
         
     }
-
+    public SamplePlugin() {
+        instance = this;
+    }
     @Override
     public void onEnable() {
+        
+    }
+    public void handlePlayerJoin(Player p) {
         
     }
 }
