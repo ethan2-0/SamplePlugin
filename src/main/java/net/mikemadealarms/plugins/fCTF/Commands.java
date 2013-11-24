@@ -34,6 +34,7 @@ public class Commands implements CommandExecutor {
                 Game.instance.teams.get(i).addPlayer(p);
                 return true;
             } else {
+                sender.sendMessage("This command can only be used in-game!");
                 return false;
             }
         } else {
