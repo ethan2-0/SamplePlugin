@@ -8,8 +8,6 @@ import java.util.ArrayList;
 
 public class Game {
     public Game instance;
-    public int TeamACap;
-    public int TeamBCap;
     public int Cap2Win;
     public int Players2Start;
     public ArrayList<Team> teams;
