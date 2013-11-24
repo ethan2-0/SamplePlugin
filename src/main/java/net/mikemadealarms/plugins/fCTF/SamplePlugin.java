@@ -1,13 +1,13 @@
-
+/**
+ * Copyright © 2013 Ethan White and Mike Stegne
+ */
 package net.mikemadealarms.plugins.fCTF;
 
 import java.util.ArrayList;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
-/**
- * Copyright © 2013 Ethan White and Mike Stegne
- */
+
 public class SamplePlugin extends JavaPlugin {
     public static SamplePlugin instance;
     public ArrayList<fPlayer> players;
@@ -44,9 +44,5 @@ public class SamplePlugin extends JavaPlugin {
     public fPlayer getAPlayer() {
         return players.get(0);
     }
-    public Location getLocationOfTeamSpawn(int teamNum) {
-        if(Game.instance.teams.get(teamNum) != null) {
-            
-        }
-    }
+    
 }

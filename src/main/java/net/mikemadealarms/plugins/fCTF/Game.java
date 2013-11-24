@@ -37,4 +37,9 @@ public class Game {
         addTeam(new Team(ChatColor.RED, new ItemStack(Material.WOOL, 1, (short) 14)));
         addTeam(new Team(ChatColor.BLUE, new ItemStack(Material.WOOL, 1, (short) 11)));
     }
+    public Location getLocationOfTeamSpawn(int teamNum) {
+        if(Game.instance.teams.get(teamNum) != null) {
+            
+        }
+    }
 }
