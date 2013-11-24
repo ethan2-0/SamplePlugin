@@ -38,9 +38,9 @@ public class SamplePlugin extends JavaPlugin {
         Game.instance.teams.get(0).flag.setY(this.getConfig().getInt("Flag.TeamA.Y"));
         Game.instance.teams.get(0).flag.setZ(this.getConfig().getInt("Flag.TeamA.Z"));
         
-        Game.instance.teams.get(1).flag.setX(this.getConfig().getInt("Flag.TeamA.X"));
-        Game.instance.teams.get(1).flag.setY(this.getConfig().getInt("Flag.TeamA.Y"));
-        Game.instance.teams.get(1).flag.setZ(this.getConfig().getInt("Flag.TeamA.Z"));
+        Game.instance.teams.get(1).flag.setX(this.getConfig().getInt("Flag.TeamB.X"));
+        Game.instance.teams.get(1).flag.setY(this.getConfig().getInt("Flag.TeamB.Y"));
+        Game.instance.teams.get(1).flag.setZ(this.getConfig().getInt("Flag.TeamB.Z"));
     }
     public void handlePlayerJoin(Player p) {
         players.add(new fPlayer(p));
