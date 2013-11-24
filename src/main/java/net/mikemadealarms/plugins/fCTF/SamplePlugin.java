@@ -40,4 +40,10 @@ public class SamplePlugin extends JavaPlugin {
     public fPlayer getAPlayer() {
         return players.get(0);
     }
+    public void addTeam() {
+        
+    }
+    public void initializeTeams() {
+        
+    }
 }
