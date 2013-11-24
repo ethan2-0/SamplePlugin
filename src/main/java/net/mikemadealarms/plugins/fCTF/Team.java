@@ -10,6 +10,7 @@ public class Team {
     String prefix;
     ArrayList<fPlayer> players;
     public int captures;
+    public boolean hasFlag;
     public Team(String prefix) {
         this.prefix = prefix;
         players = new ArrayList<fPlayer>();

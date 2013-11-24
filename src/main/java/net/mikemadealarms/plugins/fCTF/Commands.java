@@ -6,6 +6,7 @@
 
 package net.mikemadealarms.plugins.fCTF;
 
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -19,6 +20,7 @@ public class Commands implements CommandExecutor {
         } else if (cmd.getLabel().equalsIgnoreCase("ctf")) {
             if (args[0].equalsIgnoreCase("reload")) {
                 SamplePlugin.instance.reloadConfig();
+                sender.sendMessage(ChatColor.GREEN + "Config has been reloaded!");
                 return true;
             } else {
                 return false;
