@@ -6,5 +6,8 @@
 
 package net.mikemadealarms.plugins.fCTF;
 
-public class Listeners implements Listeners {
+import org.bukkit.event.Listener;
+
+public class Listeners implements Listener {
+    
 }
