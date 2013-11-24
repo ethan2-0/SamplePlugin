@@ -32,6 +32,7 @@ public class Commands implements CommandExecutor {
                 Team t = Game.instance.getTeamOf(p);
                 t.removePlayer(p);
                 Game.instance.teams.get(i).addPlayer(p);
+                return true;
             }
         } else {
             return false;
