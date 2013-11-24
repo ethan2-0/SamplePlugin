@@ -23,6 +23,7 @@ public class SamplePlugin extends JavaPlugin {
     public void onEnable() {
         getCommand("test").setExecutor(new Commands());
         Game.instance.Players2Start = 2;
+        Game.instance.Time2Start = 30;
     }
     public void handlePlayerJoin(Player p) {
         players.add(new fPlayer(p));
