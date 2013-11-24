@@ -3,6 +3,9 @@
  */
 
 package net.mikemadealarms.plugins.fCTF;
+
+import org.bukkit.ChatColor;
+
 public class Countdown_Start implements Runnable {
 
     public void run() {
@@ -12,8 +15,19 @@ public class Countdown_Start implements Runnable {
             } catch(InterruptedException e) {
                 //Do nothing
             }
-            
+            SamplePlugin.instance.getServer().broadcastMessage((Game.instance.Time2Start - i) + " seconds until game start!");
         }
+        for(int i = 10; i > 0; i--) {
+            try {
+                Thread.sleep(1000L);
+            } catch(InterruptedException e) {
+                //Do nothing
+            }
+            SamplePlugin.instance.getServer().broadcastMessage(i + " seconds until game start!");
+        }
+        gameStarted();
     }
-    
+    public void gameStarted() {
+        
+    }
 }

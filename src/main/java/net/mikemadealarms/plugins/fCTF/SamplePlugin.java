@@ -36,4 +36,7 @@ public class SamplePlugin extends JavaPlugin {
         }
         return null;
     }
+    public fPlayer getAPlayer() {
+        return players.get(0);
+    }
 }
