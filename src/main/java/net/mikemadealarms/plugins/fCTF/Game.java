@@ -19,4 +19,9 @@ public class Game {
     public void startGame() {
         
     }
+    public void getTeamOf(fPlayer p) {
+        for(int i = 0; i < teams.size(); i++) {
+            
+        }
+    }
 }

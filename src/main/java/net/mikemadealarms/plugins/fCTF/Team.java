@@ -9,6 +9,7 @@ import java.util.ArrayList;
 public class Team {
     String prefix;
     ArrayList<fPlayer> players;
+    public int captures;
     public Team(String prefix) {
         this.prefix = prefix;
         players = new ArrayList<fPlayer>();
