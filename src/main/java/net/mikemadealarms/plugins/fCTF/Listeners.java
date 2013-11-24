@@ -25,7 +25,7 @@ public class Listeners implements Listener {
     public void onPlayerPickupItem(PlayerPickupItemEvent event) {
         ItemStack wool = new ItemStack(Material.WOOL, 1, (short) 14);
         if (event.getItem().isOnGround() && event.getItem().getItemStack().equals(wool)) {
-            
+            Game.instance.teams.get(0).hasFlag = true;
         }
     }
 
