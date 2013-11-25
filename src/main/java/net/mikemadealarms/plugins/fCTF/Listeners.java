@@ -30,7 +30,14 @@ public class Listeners implements Listener {
     @EventHandler(priority = EventPriority.HIGH)
     public void onPlayerPickupItem(PlayerPickupItemEvent event) {
         if (event.getItem().isOnGround() && event.getItem().getItemStack().equals(Game.instance.getTeamOf(SamplePlugin.instance.getFPlayerByPlayer(event.getPlayer())).wool)) {
-            
+            SamplePlugin.instance.getFPlayerByPlayer(event.getPlayer()).aquireFlag();
+        }
+    }
+    @EventHandler(priority = EventPriority.LOW)
+    public void onPlayerMove(PlayerMoveEvent event) {
+        fPlayer p = SamplePlugin.instance.getFPlayerByPlayer(event.getPlayer());
+        if(p.hasFlag) {
+            p.attempToPlantFlag();
         }
     }
 

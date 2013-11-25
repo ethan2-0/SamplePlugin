@@ -21,6 +21,17 @@ public class fPlayer {
         
     }
     public boolean attempToPlantFlag() {
-        
+        Team t = getTeam();
+        double dist = Util.getDistanceBetween(p.getLocation(), t.flag);
+        if(dist < 1) {
+            return true;
+        }
+        t.hasFlag = false;
+        hasFlag = false;
+        t.captures += 1;
+        return false;
+    }
+    public Team getTeam() {
+        return Game.instance.getTeamOf(this);
     }
 }
