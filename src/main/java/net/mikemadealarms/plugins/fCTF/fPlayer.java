@@ -24,14 +24,21 @@ public class fPlayer {
         Team t = getTeam();
         double dist = Util.getDistanceBetween(p.getLocation(), t.flag);
         Team ot = getOtherTeam();
-        
+        if(ot.hasFlag) {
+            return false;
+        }
         if(dist < 1) {
             return true;
         }
+        plantFlag();
+        return false;
+    }
+    //This will plant the flag 100% of the time, regardless of whether the flag is elegible to be planted.
+    private void plantFlag() {
+        Team t = getTeam();
         t.hasFlag = false;
         hasFlag = false;
         t.captures += 1;
-        return false;
     }
     public Team getTeam() {
         return Game.instance.getTeamOf(this);
