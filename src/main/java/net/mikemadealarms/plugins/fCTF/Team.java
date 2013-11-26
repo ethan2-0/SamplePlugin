@@ -7,6 +7,7 @@ package net.mikemadealarms.plugins.fCTF;
 import java.util.ArrayList;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
+import org.bukkit.entity.Item;
 import org.bukkit.inventory.ItemStack;
 
 public class Team {
@@ -16,7 +17,8 @@ public class Team {
     public boolean hasFlag;
     public Location spawn;
     public Location flag;
-    ItemStack wool;
+    public ItemStack wool;
+    public Item woolOnField;
     public Team(ChatColor prefix, ItemStack wool) {
         this.prefix = prefix;
         players = new ArrayList<fPlayer>();

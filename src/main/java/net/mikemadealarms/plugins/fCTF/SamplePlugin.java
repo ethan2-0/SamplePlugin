@@ -17,6 +17,11 @@ public class SamplePlugin extends JavaPlugin {
     public void onDisable() {
         
     }
+    public void onTick() {
+        for(int i = 0; i < Game.instance.teams.size(); i++) {
+            
+        }
+    }
     public SamplePlugin() {
         instance = this;
         players = new ArrayList<fPlayer>();
