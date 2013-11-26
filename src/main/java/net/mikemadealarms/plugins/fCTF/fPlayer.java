@@ -23,6 +23,8 @@ public class fPlayer {
     public boolean attempToPlantFlag() {
         Team t = getTeam();
         double dist = Util.getDistanceBetween(p.getLocation(), t.flag);
+        Team ot = getOtherTeam();
+        
         if(dist < 1) {
             return true;
         }
@@ -33,5 +35,9 @@ public class fPlayer {
     }
     public Team getTeam() {
         return Game.instance.getTeamOf(this);
+    }
+    public Team getOtherTeam() {
+        int index = Game.instance.getTeamIndexOf(this);
+        return Game.instance.teams.get(index);
     }
 }
