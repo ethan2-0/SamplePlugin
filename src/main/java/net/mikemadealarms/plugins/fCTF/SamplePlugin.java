@@ -4,6 +4,7 @@
 package net.mikemadealarms.plugins.fCTF;
 
 import java.util.ArrayList;
+import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -11,6 +12,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class SamplePlugin extends JavaPlugin {
     public static SamplePlugin instance;
     public ArrayList<fPlayer> players;
+    public Location spawn;
     @Override
     public void onDisable() {
         
@@ -41,6 +43,10 @@ public class SamplePlugin extends JavaPlugin {
         Game.instance.teams.get(1).flag.setX(this.getConfig().getInt("Flag.TeamB.X"));
         Game.instance.teams.get(1).flag.setY(this.getConfig().getInt("Flag.TeamB.Y"));
         Game.instance.teams.get(1).flag.setZ(this.getConfig().getInt("Flag.TeamB.Z"));
+        
+        spawn.setX(this.getConfig().getInt("Spawn.Spawn.X"));
+        spawn.setY(this.getConfig().getInt("Spawn.Spawn.Y"));
+        spawn.setZ(this.getConfig().getInt("Spawn.Spawn.Z"));
     }
     public void handlePlayerJoin(Player p) {
         players.add(new fPlayer(p));
