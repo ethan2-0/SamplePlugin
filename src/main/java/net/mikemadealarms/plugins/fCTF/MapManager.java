@@ -16,4 +16,7 @@ public class MapManager {
             player.p.teleport(SamplePlugin.instance.spawn);
         }
     }
+    public void tpPlayer2Map(Player p) {
+        SamplePlugin.instance.getFPlayerByPlayer(p);
+    }
 }
