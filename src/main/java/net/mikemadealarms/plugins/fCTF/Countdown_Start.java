@@ -4,7 +4,9 @@
 
 package net.mikemadealarms.plugins.fCTF;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.World;
 
 public class Countdown_Start implements Runnable {
     private boolean continueCountdown = true;
@@ -31,6 +33,9 @@ public class Countdown_Start implements Runnable {
         SamplePlugin.instance.getServer().broadcastMessage(ChatColor.LIGHT_PURPLE + "Game Started!");
         Game.instance.GameInProgress = true;
         Game.instance.startGame();
+        World world = Bukkit.getWorld("world");
+        world.dropItemNaturally(Game.instance.teams.get(0).flag, Game.instance.teams.get(0).wool);
+        world.dropItemNaturally(Game.instance.teams.get(1).flag, Game.instance.teams.get(1).wool);
     }
     public void stopCountdown() {
         continueCountdown = false;
